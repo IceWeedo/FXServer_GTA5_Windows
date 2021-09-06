@@ -18,5 +18,8 @@ En cas de problème je suis disponible sur [Discord](https://discord.com/invite/
   * Modifier le fichier **server.cfg** avec vos informations: **Nom du serveur**, [Clé FiveM](https://keymaster.fivem.net), [Clé API Steam](https://steamcommunity.com/dev/apikey)
     * (C:\FXServer\server.cfg)
 
-  * Exécuter **run.bat**
-    * (C:\FXServer\run.bat)
+  * Exécuter **run_whit_txadmin.bat.bat** pour utilisé txAdmin
+    * (C:\FXServer\run_with_txadmin.bat)
+    ou
+  * Exécuter **run_whitout_txadmin.bat.bat** pour ne pas utilisé txAdmin
+    * (C:\FXServer\run_with_txadmin.bat)
