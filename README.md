@@ -19,7 +19,7 @@ En cas de problème je suis disponible sur [Discord](https://discord.com/invite/
     * (C:\FXServer\server.cfg)
 
   * Exécuter **run_whit_txadmin.bat.bat** pour utilisé txAdmin
-    * (C:\FXServer\run_with_txadmin.bat)
+    * (C:\FXServer\run_with_txadmin.bat) *
 ou
   * Exécuter **run_whitout_txadmin.bat.bat** pour ne pas utilisé txAdmin
     * (C:\FXServer\run_with_txadmin.bat)
