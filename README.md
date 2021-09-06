@@ -22,4 +22,4 @@ En cas de problème je suis disponible sur [Discord](https://discord.com/invite/
     * (C:\FXServer\run_with_txadmin.bat)
     
   * Exécuter **run_whitout_txadmin.bat.bat** pour ne pas utilisé txAdmin
-    * (C:\FXServer\run_with_txadmin.bat)
+    * (C:\FXServer\run_without_txadmin.bat)
