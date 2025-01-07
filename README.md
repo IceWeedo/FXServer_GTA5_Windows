@@ -8,7 +8,7 @@ En cas de problème je suis disponible sur [Discord](https://discord.com/invite/
 
 ## - Installation
 
-  * Télécharger l'archive [ici](https://github.com/IceWeedo/FXServer_GTA5_Windows/releases/latest)
+  * Télécharger l'archive [ici](https://github.com/IceWeedo/FXServer_GTA5_Windows/archive/refs/heads/main.zip)
   * Extraire l'archive à la racine de votre disque local **C:**
     * (C:\FXServer)
 
