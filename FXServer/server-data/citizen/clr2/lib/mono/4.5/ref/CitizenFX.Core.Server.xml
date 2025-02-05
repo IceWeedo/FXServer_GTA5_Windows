@@ -7221,6 +7221,11 @@
             GET_PED_MAX_HEALTH
             </summary>
         </member>
+        <member name="F:CitizenFX.Core.Native.Hash.GET_PED_RELATIONSHIP_GROUP_HASH">
+            <summary>
+            Gets the current relationship group hash of a ped.
+            </summary>
+        </member>
         <member name="F:CitizenFX.Core.Native.Hash.GET_PED_SCRIPT_TASK_COMMAND">
             <summary>
             Gets the script task command currently assigned to the ped.
@@ -7265,6 +7270,11 @@
         <member name="F:CitizenFX.Core.Native.Hash.GET_PLAYER_FAKE_WANTED_LEVEL">
             <summary>
             Gets the current fake wanted level for a specified player. This native is used server side when using OneSync.
+            </summary>
+        </member>
+        <member name="F:CitizenFX.Core.Native.Hash.GET_PLAYER_FOCUS_POS">
+            <summary>
+            Gets the focus position (i.e. the position of the active camera in the game world) of a player.
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.GET_PLAYER_FROM_INDEX">
@@ -7397,10 +7407,14 @@
             ```
             [
             {
-            "name": "cmdlist"
+            "name": "cmdlist",
+            "resource": "resource",
+            "arity" = -1,
             },
             {
             "name": "command1"
+            "resource": "resource_2",
+            "arity" = -1,
             }
             ]
             ```
@@ -7409,6 +7423,27 @@
         <member name="F:CitizenFX.Core.Native.Hash.GET_RESOURCE_BY_FIND_INDEX">
             <summary>
             GET_RESOURCE_BY_FIND_INDEX
+            </summary>
+        </member>
+        <member name="F:CitizenFX.Core.Native.Hash.GET_RESOURCE_COMMANDS">
+            <summary>
+            Returns all commands registered by the specified resource.
+            The data returned adheres to the following layout:
+            
+            ```
+            [
+            {
+            "name": "cmdlist",
+            "resource": "example_resource",
+            "arity" = -1,
+            },
+            {
+            "name": "command1"
+            "resource": "example_resource2",
+            "arity" = -1,
+            }
+            ]
+            ```
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.GET_RESOURCE_KVP_FLOAT">
@@ -7813,6 +7848,11 @@
             Otherwise will return false.
             
             If the player is not wanted, it simply returns false.
+            </summary>
+        </member>
+        <member name="F:CitizenFX.Core.Native.Hash.IS_PLAYER_IN_FREE_CAM_MODE">
+            <summary>
+            IS_PLAYER_IN_FREE_CAM_MODE
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.IS_PLAYER_USING_SUPER_JUMP">
@@ -10790,6 +10830,17 @@
             GET_PED_MAX_HEALTH
             </summary>
         </member>
+        <member name="M:CitizenFX.Core.Native.API.GetPedRelationshipGroupHash(System.Int32)">
+            <summary>
+            Gets the current relationship group hash of a ped.
+            </summary>
+            <param name="ped">
+            The target ped
+            </param>
+            <returns>
+            The relationship group hash.
+            </returns>
+        </member>
         <member name="M:CitizenFX.Core.Native.API.GetPedScriptTaskCommand(System.Int32)">
             <summary>
             Gets the script task command currently assigned to the ped.
@@ -10887,6 +10938,17 @@
             </param>
             <returns>
             The fake wanted level
+            </returns>
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.GetPlayerFocusPos(System.String)">
+            <summary>
+            Gets the focus position (i.e. the position of the active camera in the game world) of a player.
+            </summary>
+            <param name="playerSrc">
+            The player to get the focus position of
+            </param>
+            <returns>
+            Returns a `Vector3` containing the focus position of the player.
             </returns>
         </member>
         <member name="M:CitizenFX.Core.Native.API.GetPlayerFromIndex(System.Int32)">
@@ -11123,10 +11185,14 @@
             ```
             [
             {
-            "name": "cmdlist"
+            "name": "cmdlist",
+            "resource": "resource",
+            "arity" = -1,
             },
             {
             "name": "command1"
+            "resource": "resource_2",
+            "arity" = -1,
             }
             ]
             ```
@@ -11144,6 +11210,29 @@
             </param>
             <returns>
             The resource name as a `string`
+            </returns>
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.GetResourceCommands(System.String)">
+            <summary>
+            Returns all commands registered by the specified resource.
+            The data returned adheres to the following layout:
+            ```
+            [
+            {
+            "name": "cmdlist",
+            "resource": "example_resource",
+            "arity" = -1,
+            },
+            {
+            "name": "command1"
+            "resource": "example_resource2",
+            "arity" = -1,
+            }
+            ]
+            ```
+            </summary>
+            <returns>
+            An object containing registered commands.
             </returns>
         </member>
         <member name="M:CitizenFX.Core.Native.API.GetResourceKvpFloat(System.String)">
@@ -11806,6 +11895,17 @@
             </param>
             <returns>
             boolean value, depending if the player is evading his wanted level or not.
+            </returns>
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.IsPlayerInFreeCamMode(System.String)">
+            <summary>
+            IS_PLAYER_IN_FREE_CAM_MODE
+            </summary>
+            <param name="playerSrc">
+            The player to get the free camera mode status of
+            </param>
+            <returns>
+            Returns if the player is in free camera mode.
             </returns>
         </member>
         <member name="M:CitizenFX.Core.Native.API.IsPlayerUsingSuperJump(System.String)">
